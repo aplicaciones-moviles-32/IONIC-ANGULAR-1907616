@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-raiz',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -19,6 +19,11 @@ export class AppComponent {
     "../assets/images/pedillos.jpg"
   ];
 
+  perfil = true;
+
+  togglePerfil() : void{
+    this.perfil = !this.perfil;
+  }
 
   
 }
