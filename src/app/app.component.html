@@ -1,7 +1,14 @@
-<h1>Hola, mundo</h1>
+<ion-content>
+  <a routerLink="/feed">Feed</a>
+  <ion-toggle color="primary"></ion-toggle>
+  <ion-button (click)="togglePerfil()">
+    <span *ngIf="perfil">Vista feed</span>
+    <span *ngIf="!perfil">Vista Perfil</span>
+  </ion-button>
 
-<app-feed></app-feed>
-
+  <app-feed *ngIf="!perfil"></app-feed>
+  <app-perfil *ngIf="perfil"></app-perfil>
+</ion-content>
 <!--
 
 
