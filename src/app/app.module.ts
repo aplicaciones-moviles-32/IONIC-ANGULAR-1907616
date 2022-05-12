@@ -15,21 +15,26 @@ import { PublicacionComponent } from './publicacion/publicacion.component';
 import { FormsModule } from '@angular/forms';
 import { RoutesModule } from './routes.module';
 
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     FeedComponent,
     PerfilComponent,
     TabsComponent,
+  
     PublicacionComponent,
     PublicacionesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     IonicModule.forRoot(),
-    RoutesModule
+    RoutesModule,
   ],
   providers: [],
   bootstrap: [AppComponent], 

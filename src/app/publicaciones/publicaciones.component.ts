@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { BdServiceService } from './../bd-service.service';
 
 @Component({
   selector: 'app-publicaciones',
@@ -7,31 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicacionesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private bd: BdServiceService) { }
 
   ngOnInit(): void {
+    this.bd.getPublicacionesUsuario().subscribe((res : any) => {
+     this.publicaciones = res;
+    })
   }
 
-  publicaciones = [
-    {
-      "id" : "1a",
-      "imagen": "./assets/images/pedillos.jpg"
-    }, 
-    {
-      "id" : "2b",
-      "imagen": "./assets/images/pedillos.jpg"
-    }, 
-    {
-      "id" : "3c",
-      "imagen": "./assets/images/pedillos.jpg"
-    }, 
-    {
-      "id" : "4d",
-      "imagen": "./assets/images/pedillos.jpg"
-    },
-    {
-      "id" : "5e",
-      "imagen": "./assets/images/pedillos.jpg"
-    }
-  ]
+  publicaciones : any = [];
+
 }
