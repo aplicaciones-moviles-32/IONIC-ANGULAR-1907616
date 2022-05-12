@@ -12,7 +12,7 @@ export class PublicacionesComponent implements OnInit {
   constructor(private http: HttpClient, private bd: BdServiceService) { }
 
   ngOnInit(): void {
-    this.bd.getPublicacionesUsuario().subscribe(res => {
+    this.bd.getPublicacionesUsuario().subscribe((res : any) => {
       this.publicaciones = res;
     })
   }

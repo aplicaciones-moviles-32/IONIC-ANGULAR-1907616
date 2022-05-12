@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   avatar: string = "";
 
   ngOnInit(): void {
-    this.bd.getDatosUsuario().subscribe(res => {
+    this.bd.getDatosUsuario().subscribe((res : any) => {
       console.log(res);
       
     })
