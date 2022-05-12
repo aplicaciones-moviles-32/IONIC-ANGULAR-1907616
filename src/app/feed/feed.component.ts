@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient}  from '@angular/common/http';
 
 import { BdServiceService } from '../bd-service.service';
+import { PopoverController } from '@ionic/angular';
+import { PopoverComponent } from '../popover/popover.component';
 
 @Component({
   selector: 'app-feed',
@@ -19,4 +21,13 @@ export class FeedComponent implements OnInit {
   }
 
   posts : any = [];
+
+  isPopoverOpen: boolean = false;
+
+  
+  borrar(postId: any): void {
+    
+    //this.db.deletePublicacion(id);
+  }
+
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-import { BdServiceService } from './../bd-service.service';
+import { BdServiceService } from '../bd-service.service';
 
 @Component({
   selector: 'app-publicaciones',
@@ -13,11 +12,17 @@ export class PublicacionesComponent implements OnInit {
   constructor(private http: HttpClient, private bd: BdServiceService) { }
 
   ngOnInit(): void {
-    this.bd.getPublicacionesUsuario().subscribe((res : any) => {
-     this.publicaciones = res;
+    this.bd.getPublicacionesUsuario().subscribe(res => {
+      this.publicaciones = res;
     })
   }
 
   publicaciones : any = [];
 
+  activo = 'grid';
+
+  toggleActivo(activo: string):void {
+    this.activo = activo;
+  }
+  
 }

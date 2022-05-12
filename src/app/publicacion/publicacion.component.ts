@@ -12,19 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PublicacionComponent implements OnInit {
 
-  constructor(private ruta: ActivatedRoute, private bd:BdServiceService) {}
+  constructor(private ruta: ActivatedRoute, private bd: BdServiceService ) {}
 
    publicacion = this.ruta.snapshot.params['id'];
    publicacionImprimir: any = {}
-
-  ngOnInit(): void {
-    console.log(this.publicacion);
+   
+   ngOnInit(): void {
+     console.log(this.publicacion);
     this.obtenerPublicacion(this.publicacion);
+    
+    }
 
-  }
-  publicaciones : any = [] 
+
   obtenerPublicacion(id: string) : any {
     this.bd.getPublicacionDetalle(id);
   } 
 
+  
 }
