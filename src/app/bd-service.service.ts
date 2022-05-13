@@ -1,5 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -31,10 +38,13 @@ postPublicacion(post: any) {
 
 
 //DELETE
-deletePublicacion(idPost: any){
-  //return this.http.post('https://insta-base-32-default-rtdb.firebaseio.com/usuario/publicaciones.json', idPost)
+deletePublicacion(id: number){
+  return this.http.delete('https://insta-base-32-default-rtdb.firebaseio.com/usuario/publicaciones/'+ id.toString() + '.json')
 }
 
 //PUT
-updatePublicacion() {}
+updatePublicacion(id: number,nuevosDatos: any) {
+return this.http.put('https://insta-base-32-default-rtdb.firebaseio.com/usuario/publicaciones/'+ id.toString() + '.json',nuevosDatos)
+
+}
 }
