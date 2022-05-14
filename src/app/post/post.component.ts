@@ -23,8 +23,8 @@ export class PostComponent implements OnInit {
   nuevoPost : any = {
     "caption": "", 
     "id": "", 
-    "imagen": "/imagenes/Ruffles.png", 
-    "usuario": "@ruffles"
+    "imagen": "./assets/images/cheems.jpg", 
+    "usuario": "@cheems"
   }
 
   subir() {

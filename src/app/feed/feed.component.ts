@@ -30,7 +30,7 @@ export class FeedComponent implements OnInit {
     })
   }
   
-  //postIndex: number
+ 
   borrar(idPost : number)  {
     this.db.deletePublicacion(idPost).subscribe(res => {
       console.log(res);
