@@ -25,7 +25,7 @@ export class FeedComponent implements OnInit {
   isPopoverOpen: boolean = false;
 
   cargarFeed() {
-    this.db.getPublicaciones().subscribe(res => {
+    this.db.getPublicaciones().subscribe((res : any) => {
       this.posts = res;
     })
   }

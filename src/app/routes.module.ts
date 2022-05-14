@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { FeedComponent } from './feed/feed.component';
-import { MyGuard } from './guards/my-guard';
 import { PerfilComponent } from './perfil/perfil.component';
+import { MyGuard } from './guards/my-guards';
 import { PostComponent } from './post/post.component';
 
 import { PublicacionComponent } from './publicacion/publicacion.component';

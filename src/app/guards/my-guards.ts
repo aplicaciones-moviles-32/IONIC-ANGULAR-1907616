@@ -5,7 +5,6 @@ import { Observable } from "rxjs";
 class TokenUsuario{}
 class Permisos {
     canActivate(usuario: TokenUsuario) : boolean {
-        //id: string
         return true;
     }
 }

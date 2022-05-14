@@ -34,7 +34,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 
 //Auth
 import { SETTINGS as AUTH_SETTINGS } from '@angular/fire/compat/auth';
-import {MyGuard} from './guards/my-guard';
+import { MyGuard } from './guards/my-guards';
 import { AuthComponent } from './auth/auth.component';
 
 

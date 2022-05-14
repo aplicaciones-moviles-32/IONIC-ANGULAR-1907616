@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
-//import { AngularFireAuth } from '@angular/fire/compat/auth';
-//import firebase from '@firebase/app-compat';
+
 
 import {AuthService} from '../auth.service';
 
