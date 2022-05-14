@@ -1,17 +1,17 @@
-<ion-app>
-    <ion-grid>
-        <ion-row *ngFor="let perrillo of perrillos">
+   <ion-content>
+   <ion-grid>
+        <ion-row *ngFor="let post of posts">
             <ion-col >
                 <ion-card>
                     <ion-card-header>
-                        {{perrillo.usuario}}
+                        {{post.usuario}}
                     </ion-card-header>
                     <ion-card-content>
-                        <img src="{{perrillo.src}}" alt="">
-                        <p class="caption">{{perrillo.caption}}</p>
+                        <img src="{{post.imagen}}" alt="">
+                        <p class="caption">{{post.caption}}</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
         </ion-row>
     </ion-grid>
-</ion-app>
+</ion-content>

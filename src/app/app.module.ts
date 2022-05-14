@@ -5,18 +5,39 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedComponent } from './feed/feed.component';
 import { IonicModule } from '@ionic/angular';
+import { PerfilComponent } from './perfil/perfil.component';
+import { PublicacionesComponent } from './publicaciones/publicaciones.component';
+
+import { TabsComponent } from './tabs/tabs.component';
+
+import { PublicacionComponent } from './publicacion/publicacion.component';
+
+import { FormsModule } from '@angular/forms';
+import { RoutesModule } from './routes.module';
+
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FeedComponent
+    FeedComponent,
+    PerfilComponent,
+    TabsComponent,
+  
+    PublicacionComponent,
+    PublicacionesComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    IonicModule.forRoot()
+    IonicModule.forRoot(),
+    RoutesModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  exports: [RoutesModule]
 })
 export class AppModule { }
