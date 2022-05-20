@@ -1,0 +1,9 @@
+{
+  "name": "app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "v2": true,
+  "typescript": true
+}

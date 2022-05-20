@@ -1,5 +1,5 @@
 {
-  "name": "ionic-angular-1907616",
+  "name": "app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -19,8 +19,10 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@capacitor/android": "3.5.1",
+    "@capacitor/core": "^3.5.1",
     "@ionic/angular": "^6.1.4",
-    "firebase": "^9.6.9",
+    "firebase": "9.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -29,6 +31,7 @@
     "@angular-devkit/build-angular": "~13.3.4",
     "@angular/cli": "~13.3.4",
     "@angular/compiler-cli": "~13.3.0",
+    "@capacitor/cli": "^3.5.1",
     "@ionic/angular-toolkit": "latest",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
