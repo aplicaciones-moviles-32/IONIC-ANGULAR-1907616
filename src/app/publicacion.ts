@@ -1,5 +1,4 @@
-export interface Publicaciones {
-    caption: string;
-    id: string; 
-    
+export interface Publicacion {
+    caption: string,
+   id: string,
 }

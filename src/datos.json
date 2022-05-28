@@ -17,7 +17,7 @@
         "followers": 34324,
         "following": 2,
         "posts": 123,
-        "fotodeperfil": "assets/images/cheems.png",
+        "fotodeperfil": "./assets/images/cheems.png",
         "publicaciones":[ 
             {
               "id" : "1a",
